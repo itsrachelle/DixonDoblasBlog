@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dixon Doblas - Vulnerable Storytelling</title>
+    <meta name="description" content="Words that move, stories that stay. Exploring life through honest storytelling and vulnerable writing by Dixon Doblas.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Header -->
+    <nav class="header">
+        <div class="nav-container">
+            <div class="logo">
+                <div class="logo-icon">D</div>
+                <div class="logo-text">
+                    <h1>Dixon Doblas</h1>
+                    <p>Vulnerable storytelling</p>
+                </div>
+            </div>
+            
+            <div class="nav-links desktop-nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#blog" class="nav-link">Blog</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            
+            <div class="social-icons desktop-nav">
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+            
+            <button class="mobile-menu-btn" id="mobileMenuBtn">
+                <i class="fas fa-bars"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="mobile-menu" id="mobileMenu">
+            <a href="#home" class="mobile-nav-link">Home</a>
+            <a href="#blog" class="mobile-nav-link">Blog</a>
+            <a href="#about" class="mobile-nav-link">About</a>
+            <a href="#contact" class="mobile-nav-link">Contact</a>
+            <div class="mobile-social">
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Home Section -->
+        <section id="home" class="section home-section">
+            <div class="hero">
+                <div class="hero-content">
+                    <h1 class="hero-title">
+                        Words that move,<br>
+                        <span class="hero-subtitle">stories that stay</span>
+                    </h1>
+                    <p class="hero-description">
+                        Welcome to my corner of the internet where vulnerability meets storytelling. 
+                        I'm Dixon Doblas, and I believe in the power of honest words to connect us all.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#blog" class="btn btn-primary">Explore My Writing</a>
+                        <a href="#about" class="btn btn-secondary">About Me</a>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <i class="fas fa-chevron-down"></i>
+                </div>
+            </div>
+            
+            <!-- Featured Story -->
+            <div class="featured-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Featured Story</h2>
+                        <div class="section-divider"></div>
+                    </div>
+                    
+                    <div class="featured-content">
+                        <div class="featured-image">
+                            <img src="https://images.unsplash.com/photo-1455390582262-044cdead277a?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&h=600" alt="Writer at vintage typewriter">
+                        </div>
+                        <div class="featured-text">
+                            <span class="category-badge essays">Personal Essay</span>
+                            <h3>The Art of Vulnerable Writing: Finding Courage in Truth</h3>
+                            <p>In a world that often rewards perfection, choosing vulnerability in our writing can feel like standing naked in a snowstorm. Yet it's precisely this rawness that creates the most profound connections between writer and reader.</p>
+                            <div class="post-meta">
+                                <span>March 15, 2024</span>
+                                <span>•</span>
+                                <span>8 min read</span>
+                            </div>
+                            <a href="#" class="btn btn-coral" onclick="showPost('art-of-vulnerable-writing')">Read Full Story</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Recent Stories -->
+            <div class="recent-section">
+                <div class="container">
+                    <div class="section-header">
+                        <h2>Recent Stories</h2>
+                        <p>Exploring life through the lens of honest storytelling</p>
+                    </div>
+                    
+                    <div class="blog-grid" id="recentPosts">
+                        <!-- Recent posts will be loaded here -->
+                    </div>
+                    
+                    <div class="section-footer">
+                        <a href="#blog" class="btn btn-dark">View All Posts</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Blog Section -->
+        <section id="blog" class="section blog-section" style="display: none;">
+            <div class="section-hero">
+                <div class="container">
+                    <h1>All Stories</h1>
+                    <p>A collection of personal essays, writing tips, and short stories exploring the human experience</p>
+                </div>
+            </div>
+            
+            <div class="category-filters">
+                <div class="container">
+                    <div class="filter-buttons">
+                        <button class="filter-btn active" data-category="all">All Posts</button>
+                        <button class="filter-btn" data-category="essays">Personal Essays</button>
+                        <button class="filter-btn" data-category="tips">Writing Tips</button>
+                        <button class="filter-btn" data-category="stories">Short Stories</button>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="blog-grid" id="blogPosts">
+                    <!-- Blog posts will be loaded here -->
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="section about-section" style="display: none;">
+            <div class="section-hero">
+                <div class="container">
+                    <h1>About Dixon</h1>
+                    <p>A writer exploring the messy, beautiful complexity of being human</p>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="about-content">
+                    <div class="about-image">
+                        <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&h=800" alt="Dixon Doblas professional portrait">
+                    </div>
+                    <div class="about-text">
+                        <h2>Hello, I'm Dixon</h2>
+                        <div class="prose">
+                            <p>I'm a writer who believes that our most powerful stories come from our most vulnerable moments. For the past decade, I've been exploring the intersection of personal truth and universal experience through essays, short stories, and writing guidance.</p>
+                            <p>My work has appeared in various literary magazines and online publications, but more importantly, it has connected me with readers who find pieces of themselves in my words. That connection—that moment when someone says "I thought I was the only one who felt that way"—is what drives everything I do.</p>
+                            <p>When I'm not writing, you'll find me reading in coffee shops (always with a notebook nearby), taking long walks to untangle my thoughts, or having deep conversations with friends about life's beautiful contradictions.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="writing-philosophy">
+                    <h3>Why I Write</h3>
+                    <div class="philosophy-content">
+                        <p>I write because I believe in the power of honest storytelling to heal, connect, and transform. In a world that often feels fragmented and disconnected, words have the ability to remind us of our shared humanity.</p>
+                        <blockquote>"We tell ourselves stories in order to live, but sometimes we need to tell them to others to truly understand what living means."</blockquote>
+                    </div>
+                </div>
+                
+                <div class="published-work">
+                    <h3>Published Work</h3>
+                    <div class="work-grid">
+                        <div class="work-item">
+                            <h4>The Healing Power of Broken Stories</h4>
+                            <p class="publication">Literary Quarterly, Issue 47</p>
+                            <p>An exploration of how sharing our failures and setbacks can create unexpected paths to connection and growth.</p>
+                        </div>
+                        <div class="work-item">
+                            <h4>Letters to My Younger Self</h4>
+                            <p class="publication">Modern Essays Online</p>
+                            <p>A series of reflective pieces on growth, change, and the wisdom that comes from embracing uncertainty.</p>
+                        </div>
+                        <div class="work-item">
+                            <h4>The Art of Listening to Silence</h4>
+                            <p class="publication">Writer's Digest</p>
+                            <p>A guide to finding inspiration in the quiet moments and learning to trust the creative process.</p>
+                        </div>
+                        <div class="work-item">
+                            <h4>Small Truths, Big Impact</h4>
+                            <p class="publication">The Personal Essay Review</p>
+                            <p>How the smallest, most specific details in our stories often carry the greatest emotional weight.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-cta">
+                    <h3>Let's Connect</h3>
+                    <p>I love hearing from readers and fellow writers. Whether you want to share your own story, ask about the writing process, or just say hello, I'd love to hear from you.</p>
+                    <a href="#contact" class="btn btn-coral">Get in Touch</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="section contact-section" style="display: none;">
+            <div class="section-hero">
+                <div class="container">
+                    <h1>Let's Connect</h1>
+                    <p>I'd love to hear your story or answer any questions you might have</p>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="contact-content">
+                    <div class="contact-form-container">
+                        <h2>Send me a message</h2>
+                        <form class="contact-form" id="contactForm">
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="name">Name</label>
+                                    <input type="text" id="name" name="name" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">Subject</label>
+                                <input type="text" id="subject" name="subject">
+                            </div>
+                            <div class="form-group">
+                                <label for="message">Message</label>
+                                <textarea id="message" name="message" rows="6" placeholder="Tell me your story, ask a question, or just say hello..." required></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-coral full-width">Send Message</button>
+                        </form>
+                    </div>
+                    
+                    <div class="contact-info">
+                        <h2>Other ways to connect</h2>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fas fa-envelope"></i>
+                                </div>
+                                <div class="method-details">
+                                    <h3>Email</h3>
+                                    <p>dixon@dixondoblas.com</p>
+                                    <small>I usually respond within 24 hours</small>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fab fa-twitter"></i>
+                                </div>
+                                <div class="method-details">
+                                    <h3>Twitter</h3>
+                                    <p>@dixondoblas</p>
+                                    <small>Follow for writing updates and thoughts</small>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <div class="method-icon">
+                                    <i class="fab fa-linkedin"></i>
+                                </div>
+                                <div class="method-details">
+                                    <h3>LinkedIn</h3>
+                                    <p>dixon-doblas</p>
+                                    <small>Professional updates and writing insights</small>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="newsletter-signup">
+                            <h3>Stay in the loop</h3>
+                            <p>Get new stories and writing insights delivered to your inbox. No spam, just honest words when I have something worth sharing.</p>
+                            <form class="newsletter-form" id="newsletterForm">
+                                <input type="email" placeholder="Your email address" required>
+                                <button type="submit" class="btn btn-white">Subscribe to Newsletter</button>
+                            </form>
+                            <small>Unsubscribe anytime. I respect your privacy.</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Single Post View -->
+        <section id="single-post" class="section single-post-section" style="display: none;">
+            <div class="container">
+                <button class="back-btn" onclick="showSection('blog')">
+                    <i class="fas fa-arrow-left"></i> Back to Blog
+                </button>
+                
+                <article class="single-post" id="singlePostContent">
+                    <!-- Single post content will be loaded here -->
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="logo">
+                        <div class="logo-icon">D</div>
+                        <div class="logo-text">
+                            <h3>Dixon Doblas</h3>
+                            <p>Vulnerable storytelling</p>
+                        </div>
+                    </div>
+                    <p class="footer-description">
+                        Exploring the messy, beautiful complexity of being human through honest words and vulnerable storytelling.
+                    </p>
+                </div>
+                
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Explore</h4>
+                        <a href="#home">Home</a>
+                        <a href="#blog">All Stories</a>
+                        <a href="#about">About Dixon</a>
+                        <a href="#contact">Contact</a>
+                    </div>
+                    
+                    <div class="link-group">
+                        <h4>Categories</h4>
+                        <a href="#" onclick="showBlogCategory('essays')">Personal Essays</a>
+                        <a href="#" onclick="showBlogCategory('tips')">Writing Tips</a>
+                        <a href="#" onclick="showBlogCategory('stories')">Short Stories</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2024 Dixon Doblas. All rights reserved.</p>
+                <div class="footer-social">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

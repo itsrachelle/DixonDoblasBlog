@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is a full-stack blog application featuring a React frontend with TypeScript and an Express.js backend. The application showcases personal essays, writing tips, and short stories with a focus on vulnerable storytelling. It uses a PostgreSQL database with Drizzle ORM for data management and includes contact forms and newsletter subscription functionality.
+This is a static blog website built with vanilla HTML, CSS, and JavaScript. The application showcases personal essays, writing tips, and short stories with a focus on vulnerable storytelling by Dixon Doblas. It features a clean, minimalist design with mountain gradient aesthetics and responsive layout. The site includes sample blog content stored in JavaScript data structures and working contact/newsletter forms.
 
 ## User Preferences
 
@@ -11,28 +11,19 @@ Preferred communication style: Simple, everyday language.
 ## System Architecture
 
 ### Frontend Architecture
-- **Framework**: React 18 with TypeScript
-- **Build Tool**: Vite for fast development and optimized builds
-- **Routing**: Wouter for lightweight client-side routing
-- **Styling**: Tailwind CSS with custom design system featuring coral, peach, and sky color palette
-- **UI Components**: Radix UI primitives with shadcn/ui component library
-- **State Management**: TanStack Query (React Query) for server state management
-- **Forms**: React Hook Form with Zod validation
+- **Framework**: Vanilla HTML, CSS, and JavaScript (no framework dependencies)
+- **Styling**: Custom CSS with design system featuring coral (#FF6B6B), peach (#FFD1DC), and sky blue (#87CEEB) color palette
+- **Fonts**: Google Fonts - Playfair Display for headings, Inter for body text
+- **Icons**: Font Awesome 6 for icons and visual elements
+- **Responsive Design**: CSS Grid and Flexbox with mobile-first approach
+- **Animations**: CSS transitions and keyframe animations for smooth interactions
 
 ### Backend Architecture
-- **Runtime**: Node.js with Express.js framework
-- **Language**: TypeScript with ES modules
-- **API Design**: RESTful API structure
-- **Development**: Hot reload with Vite middleware integration
-- **Error Handling**: Centralized error handling middleware
-- **Logging**: Custom request/response logging for API endpoints
-
-### Data Storage
-- **Database**: PostgreSQL (configured for Neon Database)
-- **ORM**: Drizzle ORM for type-safe database operations
-- **Schema**: Three main entities - posts, contacts, and subscribers
-- **Migrations**: Drizzle Kit for database schema management
-- **Fallback**: In-memory storage implementation for development/testing
+- **Server**: Simple Node.js Express server for static file serving
+- **Language**: JavaScript ES modules
+- **File Structure**: Single-page application with section-based navigation
+- **Data Storage**: JavaScript objects with sample blog post data
+- **Forms**: Vanilla JavaScript form handling with validation
 
 ### Authentication and Authorization
 - **Current State**: No authentication system implemented
